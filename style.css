@@ -1,0 +1,88 @@
+/* Shared styles for every page. Edit the colors in :root to change the theme. */
+:root {
+  --green-dark: #1f4d3a;
+  --green: #2e6b4f;
+  --green-mid: #4f8a6a;
+  --green-light: #e8f1ea;
+  --green-pale: #f4f8f4;
+  --text: #1e2622;
+  --muted: #5d6b63;
+  --line: #cddbd1;
+  --bg: #ffffff;
+}
+
+body {
+  font-family: Arial;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Navigation bar */
+.topbar { background: var(--green-dark); border-bottom: 4px solid var(--green-mid); }
+.topbar nav {
+  max-width: 860px; margin: 0 auto; padding: 0 20px;
+  display: flex; align-items: center;
+  font-family: Helvetica, Arial, sans-serif; font-size: 0.95rem;
+}
+.topbar .site-name { color: #fff; font-weight: bold; font-size: 1.05rem; padding: 16px 0; margin-right: auto; letter-spacing: 0.02em; }
+.topbar nav a { color: #d6e6db; text-decoration: none; padding: 17px 16px; }
+.topbar nav a:hover { background: var(--green); color: #fff; }
+.topbar nav a.here { background: var(--green-mid); color: #fff; font-weight: bold; }
+
+/* Page body */
+.page { max-width: 860px; margin: 0 auto; padding: 8px 20px 60px; }
+
+/* Home page banner */
+.hero { background: var(--green-light); border-bottom: 1px solid var(--line); }
+.hero .inner { max-width: 860px; margin: 0 auto; padding: 36px 20px 28px; }
+.hero h1 { margin: 0 0 4px; }
+.hero .tagline { margin: 0 0 14px; }
+.hero .links { margin: 0; }
+.hero .links a { display: inline-block; background: var(--green); color: #fff; text-decoration: none; padding: 5px 14px; border-radius: 3px; margin: 0 8px 0 0; font-family: Helvetica, Arial, sans-serif; font-size: 0.9rem; }
+.hero .links a:hover { background: var(--green-dark); }
+
+h1, h2, h3 { font-family: Helvetica, Arial, sans-serif; line-height: 1.25; }
+h1 { font-size: 2rem; color: var(--green-dark); margin: 28px 0 4px; }
+h2 { font-size: 1.15rem; color: var(--green-dark); margin-top: 2.2em; padding: 0 0 5px 10px; border-bottom: 1px solid var(--line); border-left: 5px solid var(--green-mid); }
+h3 { font-size: 1rem; margin-bottom: 2px; }
+
+a { color: var(--green); }
+a:hover { color: var(--green-dark); }
+
+.tagline { color: var(--muted); margin-top: 0; }
+.meta { color: var(--muted); font-size: 0.92rem; margin: 0 0 8px; }
+.links a { margin-right: 14px; }
+
+.entry { margin-bottom: 1.4em; }
+.entry ul { margin-top: 4px; }
+.entry .when { color: var(--muted); font-size: 0.92rem; }
+
+/* Project cards */
+.project-list .item { background: var(--green-pale); border: 1px solid var(--line); border-left: 5px solid var(--green-mid); padding: 12px 18px 4px; margin-bottom: 14px; }
+.project-list .item h3 { margin-top: 0; font-size: 1.05rem; }
+.project-list .item h3 a { text-decoration: none; }
+.project-list .item h3 a:hover { text-decoration: underline; }
+
+table.skills { border-collapse: collapse; width: 100%; }
+table.skills td { vertical-align: top; padding: 7px 14px 7px 10px; border-bottom: 1px solid var(--line); }
+table.skills tr:nth-child(odd) { background: var(--green-pale); }
+table.skills td:first-child { font-family: Helvetica, Arial, sans-serif; font-size: 0.92rem; font-weight: bold; color: var(--green-dark); white-space: nowrap; }
+
+figure { margin: 1.2em 0; }
+figure img { max-width: 100%; display: block; background: #e4e4df; border: 1px solid var(--line); }
+figcaption { color: var(--muted); font-size: 0.88rem; margin-top: 4px; }
+
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.gallery figure { margin: 0; }
+
+/* Marks every spot you still need to fill in. Search the HTML for class="todo". */
+.todo { background: #fff3b0; padding: 0 3px; }
+
+footer { margin-top: 3em; padding-top: 12px; border-top: 3px solid var(--green-light); color: var(--muted); font-size: 0.88rem; }
+
+@media print {
+  .topbar, footer { display: none; }
+  .page { max-width: none; }
+}
