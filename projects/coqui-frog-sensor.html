@@ -20,27 +20,31 @@
 <div class="page">
 
 <h1>Coqui Frog Acoustic Sensor</h1>
-<p class="meta">2024 · Undergraduate Research Assistant · University of Hawaiʻi at Mānoa · Hawaiʻi Island</p>
-<p class="meta">Status: Complete · Tools: Edge Impulse, embedded machine learning, Raspberry Pi, C++, circuit design, 3D modeling</p>
+<p class="meta">2024 · University of Hawaiʻi at Mānoa IPM Lab</p>
+<p class="meta">Edge Impulse Machine Learning, Arduino Nano 33 BLE, C++</p>
 
 <h2>Overview</h2>
-<p>A field sensor system that detects invasive coqui frogs from their calls and estimates population density on Hawaiʻi Island.</p>
-
-<h2>Question</h2>
-<p>Can machine learning models running on low-cost field hardware classify coqui frog calls well enough to estimate population density? <span class="todo">[Edit to match your framing.]</span></p>
+<p>The Coqui Frog Sensor is a project I assisted with in Dr. Mark Wright's lab in UH Manoa's College of Tropical Agriculture and Human Resources (CTAHR) working with my graduate student mentor Ali Miarkiani. The sensor is a field device that detects and counts invasive coqui frog calls to track their presence and estimated density in forests on the island of Hawaiʻi. Invasive Coqui frogs affect Hawaiʻi's insect life and the relationships between native insects and plants. Creating automated ways to monitor their populations like this may eventually allow us to keep a more accurate, constant eye on an invasive speciesʻ population and how they interact with the surrounding environment.</p>
 
 <h2>Methods</h2>
-<p>Trained machine learning models in Edge Impulse to classify acoustic recordings. <span class="todo">[Add recording sites, number of recordings, model type, and how density was estimated.]</span></p>
+
+<h3>Data collection</h3>
+<p>More than five hours of coqui recordings yielded over 300 isolated coqui call samples. I also collected about 1,000 unrelated sound samples so that the sensor would learn to ignore non-coqui sounds. All samples were isolated and cut into separate samples in Audacity.</p>
+
+<h3>Model and software</h3>
+<p>I trained the classification model in Edge Impulse and wrote the counting logic in C++ which you can see <a href="/docs/coquiFrogSensor.cpp">here</a>. The display counts up to 999 and shows "full" at 1,000, at which point the sensor is collected and reset.</p>
+
+<h3>Hardware</h3>
+<p>The sensor runs on an Arduino Nano 33 BLE. I prototyped the circuit on a breadboard, then soldered it to a perfboard. A three-digit display shows the call count. The housing was modeled in Rhinoceros 3D on a birdhouse design, so units can be placed high in trees or on the ground while the electronics stay protected from wet conditions.</p>
 
 <h2>My Role</h2>
 <ul>
-  <li>Trained and evaluated the classification models</li>
-  <li>Soldered, wired, and programmed Raspberry Pi units to run the acoustic monitoring software in the field</li>
-  <li>Designed 3D-modeled protective housings for the field units</li>
+  <li>Helped design, program, and build the sensor, in Dr. Mark Wright's lab with graduate student mentor Ali Miarkiani</li>
+  <li>Trained and evaluated the classification model in Edge Impulse</li>
+  <li>Soldered, wired, and programmed all Arduino units produced, and designed their 3D-modeled housings</li>
 </ul>
 
-<h2>Results and Status</h2>
-<p><span class="todo">[Add model accuracy, deployment details, and outcome.]</span></p>
+
 
 <h2>Figures</h2>
 <figure>
@@ -48,14 +52,13 @@
   <figcaption><span class="todo">Figure 1. Caption.</span></figcaption>
 </figure>
 
-<h2>Links</h2>
-<ul>
-  <li><a href="#"><span class="todo">Code, poster, paper, or live site</span></a></li>
-</ul>
+<h2>Acknowledgments</h2>
+<p>Dr. Mark Wright (principal investigator), Ali Miarkiani (graduate student mentor), and trusty lab assistants April and Lexie.</p>
+
 
 <p><a href="../projects.html">Back to all projects</a></p>
 
-<footer>Last updated <span class="todo">[month year]</span></footer>
+<footer>Last updated November 2026</footer>
 
 </div>
 
